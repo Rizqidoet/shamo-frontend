@@ -19,9 +19,9 @@ class SignUpPage extends StatelessWidget {
                   inputUsername(),
                   inputEmail(),
                   inputPassword(),
-                  buttonSignup(),
+                  buttonSignup(context),
                   Spacer(),
-                  footer()
+                  footer(context)
                 ],
               ))),
     );
@@ -237,7 +237,7 @@ Widget inputPassword() {
   );
 }
 
-Widget buttonSignup() {
+Widget buttonSignup(BuildContext context) {
   return Container(
       margin: EdgeInsets.only(top: 30),
       width: double.infinity,
@@ -245,14 +245,16 @@ Widget buttonSignup() {
       decoration: BoxDecoration(
           color: primaryColor, borderRadius: BorderRadius.circular(12)),
       child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
           child: Text(
             "Sign up",
             style: primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
           )));
 }
 
-Widget footer() {
+Widget footer(BuildContext context) {
   return Container(
     width: double.infinity,
     child: Center(
@@ -267,9 +269,15 @@ Widget footer() {
           SizedBox(
             width: 3,
           ),
-          Text(
-            "Signin",
-            style: purpleTextStyle.copyWith(fontSize: 12, fontWeight: semiBold),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Text(
+              "Signin",
+              style:
+                  purpleTextStyle.copyWith(fontSize: 12, fontWeight: semiBold),
+            ),
           ),
         ],
       ),

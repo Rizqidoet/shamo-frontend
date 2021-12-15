@@ -18,13 +18,13 @@ class SignInPage extends StatelessWidget {
               header(),
               emailTextField(),
               passwordTextField(),
-              signInButton(),
+              signInButton(context),
               // textOrLogin(),
               // googleButton(),
               // facebookButton(),
               // whatsappButton(),
               Spacer(),
-              footer()
+              footer(context)
             ],
           ),
         )));
@@ -143,13 +143,15 @@ Widget passwordTextField() {
   );
 }
 
-Widget signInButton() {
+Widget signInButton(BuildContext context) {
   return Container(
     height: 50,
     width: double.infinity,
     margin: EdgeInsets.only(top: 30),
     child: TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, '/home');
+      },
       style: TextButton.styleFrom(
           backgroundColor: primaryColor,
           shape:
@@ -269,7 +271,7 @@ Widget whatsappButton() {
   );
 }
 
-Widget footer() {
+Widget footer(BuildContext context) {
   return Container(
     margin: EdgeInsets.only(bottom: 30),
     child: Row(
@@ -281,9 +283,14 @@ Widget footer() {
         SizedBox(
           width: 5,
         ),
-        Text("Sign up",
-            style:
-                purpleTextStyle.copyWith(fontSize: 12, fontWeight: semiBold)),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/sign-up');
+          },
+          child: Text("Sign up",
+              style:
+                  purpleTextStyle.copyWith(fontSize: 12, fontWeight: semiBold)),
+        )
       ],
     ),
   );

@@ -11,6 +11,7 @@ Color shadowColor = Color(0xffF1F8F2);
 Color bg1Color = Color(0xff1F1D2B);
 Color bg2Color = Color(0xff2B2937);
 Color bg3Color = Color(0xff242231);
+Color bg4Color = Color(0xff252836);
 Color primaryTextColor = Color(0xffFFFFFF);
 Color secondaryTextColor = Color(0xffF1F0F2);
 Color subtitleTextColor = Color(0xff504F5E);
