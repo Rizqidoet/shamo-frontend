@@ -171,31 +171,33 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               NewArrivalCard(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Football",
-                    style: greyTextStyle.copyWith(
-                        fontSize: 12, fontWeight: regular),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "Predator 20.3 Firm Ground",
-                    style: secondaryTextStyle.copyWith(
-                        fontSize: 16, fontWeight: semiBold),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "\$68,47",
-                    style: priceTextStyle.copyWith(
-                        fontSize: 14, fontWeight: medium),
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Football",
+                      style: secondaryTextStyle.copyWith(
+                          fontSize: 12, fontWeight: regular),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "Predator 20.3 Firm Ground",
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 16, fontWeight: semiBold),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "\$68,47",
+                      style: priceTextStyle.copyWith(
+                          fontSize: 14, fontWeight: medium),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
@@ -206,31 +208,33 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               NewArrivalCard(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Football",
-                    style: greyTextStyle.copyWith(
-                        fontSize: 12, fontWeight: regular),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "Predator 20.3 Firm Ground",
-                    style: secondaryTextStyle.copyWith(
-                        fontSize: 16, fontWeight: semiBold),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "\$68,47",
-                    style: priceTextStyle.copyWith(
-                        fontSize: 14, fontWeight: medium),
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Football",
+                      style: secondaryTextStyle.copyWith(
+                          fontSize: 12, fontWeight: regular),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "Predator 20.3 Firm Ground",
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 16, fontWeight: semiBold),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "\$68,47",
+                      style: priceTextStyle.copyWith(
+                          fontSize: 14, fontWeight: medium),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
@@ -241,31 +245,33 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               NewArrivalCard(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Football",
-                    style: greyTextStyle.copyWith(
-                        fontSize: 12, fontWeight: regular),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "Predator 20.3 Firm Ground",
-                    style: secondaryTextStyle.copyWith(
-                        fontSize: 16, fontWeight: semiBold),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "\$68,47",
-                    style: priceTextStyle.copyWith(
-                        fontSize: 14, fontWeight: medium),
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Football",
+                      style: secondaryTextStyle.copyWith(
+                          fontSize: 12, fontWeight: regular),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "Predator 20.3 Firm Ground",
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 16, fontWeight: semiBold),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "\$68,47",
+                      style: priceTextStyle.copyWith(
+                          fontSize: 14, fontWeight: medium),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
@@ -276,31 +282,33 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               NewArrivalCard(),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Football",
-                    style: greyTextStyle.copyWith(
-                        fontSize: 12, fontWeight: regular),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "Predator 20.3 Firm Ground",
-                    style: secondaryTextStyle.copyWith(
-                        fontSize: 16, fontWeight: semiBold),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Text(
-                    "\$68,47",
-                    style: priceTextStyle.copyWith(
-                        fontSize: 14, fontWeight: medium),
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Football",
+                      style: secondaryTextStyle.copyWith(
+                          fontSize: 12, fontWeight: regular),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "Predator 20.3 Firm Ground",
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 16, fontWeight: semiBold),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      "\$68,47",
+                      style: priceTextStyle.copyWith(
+                          fontSize: 14, fontWeight: medium),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
