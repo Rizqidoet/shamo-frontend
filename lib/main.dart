@@ -1,7 +1,9 @@
+import 'package:bwa_shamo/pages/detail_chat_page.dart';
 import 'package:bwa_shamo/pages/home/main_page.dart';
 import 'package:bwa_shamo/pages/sign_in_page.dart';
 import 'package:bwa_shamo/pages/sign_up_page.dart';
 import 'package:bwa_shamo/pages/splash_page.dart';
+import 'package:bwa_shamo/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
 import 'theme.dart';
 
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
         '/sign-in': (context) => SignInPage(),
         '/sign-up': (context) => SignUpPage(),
         '/home': (context) => MainPage(),
-        '/home': (context) => MainPage(),
+        '/chat': (context) => ChatTile(),
+        '/detail-chat': (context) => DetailChatPage(),
       },
     );
   }

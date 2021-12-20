@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
   // const ChatPage({Key? key}) : super(key: key);
-  int defaultPage = 0;
 
   Widget header() {
     return AppBar(
@@ -52,10 +51,7 @@ class ChatPage extends StatelessWidget {
             height: 50,
             width: 152,
             child: TextButton(
-              onPressed: () {
-                defaultPage = 1;
-                print(defaultPage);
-              },
+              onPressed: () {},
               style: TextButton.styleFrom(
                   backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
@@ -88,7 +84,7 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [header(), defaultPage == 0 ? emptyChat() : content()],
+      children: [header(), content()],
     );
   }
 }
