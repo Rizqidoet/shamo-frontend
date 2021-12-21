@@ -43,6 +43,282 @@ class DetailChatPage extends StatelessWidget {
       );
     }
 
+    Widget content() {
+      return Container(
+        color: priceColor,
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              height: 50,
+              color: primaryColor,
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10, right: 20),
+                    child: Row(
+                      children: [
+                        Icon(Icons.supervised_user_circle_sharp, size: 30),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "Hallo Header",
+                          style: primaryTextStyle.copyWith(
+                              fontSize: 16, fontWeight: semiBold),
+                        ),
+                        Spacer(),
+                        Icon(Icons.logout_sharp, size: 30),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+                height: 100,
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                color: redColor,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        color: Colors.green,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [Text("Hallo Row 1")],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        color: Colors.yellow,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [Text("Hallo Row 1")],
+                        ),
+                      ),
+                    ),
+                  ],
+                )),
+            Container(
+              color: primaryTextColor,
+              height: 100,
+              padding: EdgeInsets.all(5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      height: double.infinity,
+                      width: double.infinity,
+                      color: redColor,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      color: greenColor,
+                      height: double.infinity,
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "row 1",
+                                style: blackTextStyle.copyWith(
+                                    fontSize: 10, fontWeight: semiBold),
+                              ),
+                              Text(
+                                "row 2",
+                                style: blackTextStyle.copyWith(
+                                    fontSize: 10, fontWeight: semiBold),
+                              ),
+                              Text(
+                                "row 3",
+                                style: blackTextStyle.copyWith(
+                                    fontSize: 10, fontWeight: semiBold),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      color: primaryColor,
+                      height: double.infinity,
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: primaryTextColor,
+              height: 100,
+              padding: EdgeInsets.all(5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      height: double.infinity,
+                      width: double.infinity,
+                      color: redColor,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      color: greenColor,
+                      height: double.infinity,
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                "row 1",
+                                style: blackTextStyle.copyWith(
+                                    fontSize: 10, fontWeight: semiBold),
+                              ),
+                              Text(
+                                "row 2",
+                                style: blackTextStyle.copyWith(
+                                    fontSize: 10, fontWeight: semiBold),
+                              ),
+                              Text(
+                                "row 3",
+                                style: blackTextStyle.copyWith(
+                                    fontSize: 10, fontWeight: semiBold),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      color: primaryColor,
+                      height: double.infinity,
+                      width: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "row 1 column 3",
+                            style: blackTextStyle.copyWith(
+                                fontSize: 10, fontWeight: semiBold),
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: bg3Color,
       appBar: PreferredSize(
@@ -80,6 +356,7 @@ class DetailChatPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: chatInput(),
+      body: content(),
     );
   }
 }
