@@ -17,7 +17,7 @@ class ProductCard extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             Image.asset(
-              "assets/images/shoes-1.png",
+              "assets/images/runningDepan-1.png",
               fit: BoxFit.cover,
               width: 215,
               height: 120,

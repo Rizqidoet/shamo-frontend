@@ -12,6 +12,7 @@ Color bg1Color = Color(0xff1F1D2B);
 Color bg2Color = Color(0xff2B2937);
 Color bg3Color = Color(0xff242231);
 Color bg4Color = Color(0xff252836);
+Color bg5Color = Color(0xff2B2844);
 Color transaparentColor = Colors.transparent;
 Color greyTextColor = Color(0xff999999);
 Color blackTextColor = Color(0xff2E2E2E);

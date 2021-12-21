@@ -17,7 +17,7 @@ class NewArrivalCard extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             Image.asset(
-              "assets/images/shoes-2.png",
+              "assets/images/hikingDepan-1.png",
               fit: BoxFit.cover,
               width: 120,
               height: 60,

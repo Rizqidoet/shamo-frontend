@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:bwa_shamo/theme.dart';
+import 'package:bwa_shamo/widgets/chat_bubble.dart';
 import 'package:flutter/material.dart';
 
 class DetailChatPage extends StatelessWidget {
@@ -6,44 +9,137 @@ class DetailChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget chatInput() {
+    Widget content() {
+      return ListView(
+        padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+        children: [
+          ChatBubblePage(
+            textChat:
+                "Hallo, Barangnya ready kah gan untuk size 42 nya ? kalo ready mau saya order langsung nih",
+            isSender: false,
+          ),
+          ChatBubblePage(
+            textChat: "Ready Gan, silahkan order",
+            isSender: true,
+          ),
+          ChatBubblePage(
+            textChat: "Oke otw Gan",
+            isSender: false,
+          ),
+        ],
+      );
+    }
+
+    Widget productPreview() {
       return Container(
-        margin: EdgeInsets.all(20),
+        width: 225,
+        height: 75,
+        margin: EdgeInsets.only(bottom: 20),
+        decoration: BoxDecoration(
+            color: bg5Color, borderRadius: BorderRadius.circular(12)),
+        padding: EdgeInsets.all(8),
         child: Row(
           children: [
-            Expanded(
-              child: Container(
-                height: 45,
-                decoration: BoxDecoration(
-                  color: bg4Color,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                child: Center(
-                  child: TextFormField(
-                    style: secondaryTextStyle,
-                    decoration: InputDecoration.collapsed(
-                        hintText: "type message....",
-                        hintStyle: subtitleTextStyle.copyWith(
-                            fontSize: 14, fontWeight: regular)),
-                  ),
+            Container(
+              height: 54,
+              width: 54,
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  "assets/images/runningDepan-1.png",
+                  height: 54,
+                  width: 54,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(
-              width: 20,
+            Container(
+              width: 120,
+              padding: EdgeInsets.only(left: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Court Vision Serie 2",
+                    style: primaryTextStyle.copyWith(
+                        fontSize: 14, fontWeight: regular),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  Text(
+                    "\$57,15",
+                    style: priceTextStyle.copyWith(
+                        fontSize: 14, fontWeight: medium),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
             ),
-            Image.asset(
-              'assets/icons/icon_submitRounded.png',
-              height: 45,
-              width: 45,
+            Container(
+              padding: EdgeInsets.only(left: 10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    "assets/icons/icon_silang.png",
+                    height: 22,
+                    width: 22,
+                  ),
+                ],
+              ),
             )
           ],
         ),
       );
     }
 
-    Widget content() {
+    Widget chatInput() {
+      return Container(
+        margin: EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            productPreview(),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 45,
+                    decoration: BoxDecoration(
+                      color: bg4Color,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: Center(
+                      child: TextFormField(
+                        style: secondaryTextStyle,
+                        decoration: InputDecoration.collapsed(
+                            hintText: "type message....",
+                            hintStyle: subtitleTextStyle.copyWith(
+                                fontSize: 14, fontWeight: regular)),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Image.asset(
+                  'assets/icons/icon_submitRounded.png',
+                  height: 45,
+                  width: 45,
+                )
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget layouting() {
       return Container(
         color: priceColor,
         width: double.infinity,
