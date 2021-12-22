@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class ChatPage extends StatelessWidget {
   // const ChatPage({Key? key}) : super(key: key);
 
+  int sekundren = 0;
+
   Widget header() {
     return AppBar(
       backgroundColor: bg1Color,
@@ -18,7 +20,7 @@ class ChatPage extends StatelessWidget {
     );
   }
 
-  Widget emptyChat() {
+  Widget emptyChat(BuildContext context) {
     return Expanded(
         child: Container(
       child: Column(
@@ -47,19 +49,27 @@ class ChatPage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Container(
-            height: 50,
-            width: 152,
-            child: TextButton(
-              onPressed: () {},
-              style: TextButton.styleFrom(
-                  backgroundColor: primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12))),
-              child: Text(
-                "Explore Store",
-                style:
-                    primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+          GestureDetector(
+            onTap: () {
+              sekundren = 1;
+              print(sekundren);
+              (context as Element).reassemble();
+            },
+            child: Container(
+              height: 50,
+              width: 152,
+              decoration: BoxDecoration(
+                  color: primaryColor, borderRadius: BorderRadius.circular(12)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Explore Store",
+                    style: primaryTextStyle.copyWith(
+                        fontSize: 16, fontWeight: medium),
+                  ),
+                ],
               ),
             ),
           )
@@ -84,7 +94,7 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [header(), content()],
+      children: [header(), sekundren == 0 ? emptyChat(context) : content()],
     );
   }
 }

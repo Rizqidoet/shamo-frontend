@@ -1,5 +1,6 @@
 import 'package:bwa_shamo/pages/detail_chat_page.dart';
 import 'package:bwa_shamo/pages/home/main_page.dart';
+import 'package:bwa_shamo/pages/menuProfiles/edit_profile.dart';
 import 'package:bwa_shamo/pages/sign_in_page.dart';
 import 'package:bwa_shamo/pages/sign_up_page.dart';
 import 'package:bwa_shamo/pages/splash_page.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => MainPage(),
         '/chat': (context) => ChatTile(),
         '/detail-chat': (context) => DetailChatPage(),
+        '/edit-profile': (context) => EditProfilePage(),
       },
     );
   }

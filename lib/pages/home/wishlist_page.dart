@@ -1,12 +1,15 @@
 import 'package:bwa_shamo/theme.dart';
+import 'package:bwa_shamo/widgets/wishlist_card.dart';
 import 'package:flutter/material.dart';
 
 class WishlistPage extends StatelessWidget {
-  const WishlistPage({Key? key}) : super(key: key);
+  // const WishlistPage({Key? key}) : super(key: key);
+
+  int sekundren = 0;
 
   Widget header() {
     return AppBar(
-      backgroundColor: bg3Color,
+      backgroundColor: bg1Color,
       centerTitle: true,
       automaticallyImplyLeading: false,
       elevation: 0,
@@ -17,7 +20,7 @@ class WishlistPage extends StatelessWidget {
     );
   }
 
-  Widget emptyWishlist() {
+  Widget emptyWishlist(BuildContext context) {
     return Expanded(
         child: Container(
       child: Column(
@@ -49,17 +52,25 @@ class WishlistPage extends StatelessWidget {
           Container(
             height: 50,
             width: 152,
-            child: TextButton(
-              onPressed: () {},
-              style: TextButton.styleFrom(
-                  backgroundColor: primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12))),
-              child: Text(
-                "Explore Store",
-                style:
-                    primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
-              ),
+            decoration: BoxDecoration(
+                color: primaryColor, borderRadius: BorderRadius.circular(12)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    sekundren = 1;
+                    print(sekundren);
+                    (context as Element).reassemble();
+                  },
+                  child: Text(
+                    "Explore Store",
+                    style: primaryTextStyle.copyWith(
+                        fontSize: 16, fontWeight: medium),
+                  ),
+                ),
+              ],
             ),
           )
         ],
@@ -67,10 +78,33 @@ class WishlistPage extends StatelessWidget {
     ));
   }
 
+  Widget content() {
+    return Container(
+      margin: EdgeInsets.all(defaultMargin),
+      child: Column(
+        children: [
+          WishListCard(
+            imageProduct: 'assets/images/runningDepan-1.png',
+            titleProduct: "Aerostreet Hoops Gum Series",
+            priceProduct: "\$23.32",
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          WishListCard(
+            imageProduct: 'assets/images/basketDepan-1.png',
+            titleProduct: "Aerostreet Hoops 2D Series",
+            priceProduct: "\$23.32",
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [header(), emptyWishlist()],
+      children: [header(), sekundren == 0 ? emptyWishlist(context) : content()],
     );
   }
 }

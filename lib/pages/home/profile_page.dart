@@ -68,7 +68,7 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget contentAccount() {
+  Widget contentAccount(BuildContext context) {
     return Container(
       margin:
           EdgeInsets.only(top: 16, left: defaultMargin, right: defaultMargin),
@@ -77,7 +77,9 @@ class ProfilePage extends StatelessWidget {
           Row(
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/edit-profile');
+                },
                 child: Text(
                   "Edit Profile",
                   style: subtitleTextStyle.copyWith(
@@ -234,7 +236,7 @@ class ProfilePage extends StatelessWidget {
           children: [
             header(),
             titleAccount(),
-            contentAccount(),
+            contentAccount(context),
             titleGeneral(),
             contentGeneral()
           ],

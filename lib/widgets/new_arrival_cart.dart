@@ -2,27 +2,70 @@ import 'package:bwa_shamo/theme.dart';
 import 'package:flutter/material.dart';
 
 class NewArrivalCard extends StatelessWidget {
-  const NewArrivalCard({Key? key}) : super(key: key);
+  // const NewArrivalCard({Key? key}) : super(key: key);
+  final String imageProduct;
+  final String categoryProduct;
+  final String titleProduct;
+  final String priceProduct;
+
+  NewArrivalCard({
+    this.imageProduct = "",
+    this.categoryProduct = "",
+    this.titleProduct = "",
+    this.priceProduct = "",
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 120,
-        width: 120,
-        margin: EdgeInsets.only(right: 12),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20), color: Color(0xffECEDEF)),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 30),
-            Image.asset(
-              "assets/images/hikingDepan-1.png",
-              fit: BoxFit.cover,
-              width: 120,
-              height: 60,
+      margin: EdgeInsets.only(bottom: defaultMargin),
+      height: 120,
+      child: Row(
+        children: [
+          Container(
+            height: 120,
+            width: 120,
+            decoration: BoxDecoration(
+                color: primaryTextColor,
+                borderRadius: BorderRadius.circular(12)),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                imageProduct,
+                fit: BoxFit.cover,
+              ),
             ),
-          ],
-        ));
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          Expanded(
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    categoryProduct,
+                    style: greyTextStyle.copyWith(
+                        fontSize: 12, fontWeight: regular),
+                  ),
+                  Text(
+                    titleProduct,
+                    style: primaryTextStyle.copyWith(
+                        fontSize: 16, fontWeight: semiBold),
+                  ),
+                  Text(
+                    priceProduct,
+                    style: priceTextStyle.copyWith(
+                        fontSize: 14, fontWeight: medium),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

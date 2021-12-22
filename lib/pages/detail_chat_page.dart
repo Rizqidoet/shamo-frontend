@@ -11,21 +11,38 @@ class DetailChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget content() {
       return ListView(
-        padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+        padding: EdgeInsets.only(
+            left: defaultMargin, right: defaultMargin, bottom: defaultMargin),
         children: [
           ChatBubblePage(
             textChat:
                 "Hallo, Barangnya ready kah gan untuk size 42 nya ? kalo ready mau saya order langsung nih",
             isSender: false,
+            hasProduct: true,
           ),
           ChatBubblePage(
-            textChat: "Ready Gan, silahkan order",
-            isSender: true,
-          ),
+              textChat: "Ready Gan, silahkan order",
+              isSender: true,
+              hasProduct: false),
           ChatBubblePage(
-            textChat: "Oke otw Gan",
-            isSender: false,
-          ),
+              textChat: "Oke otw Gan", isSender: false, hasProduct: false),
+          ChatBubblePage(
+              textChat:
+                  'Jangan Lupa utuk memasukan Kode Voucher "#SEKUNDRENDAY" untuk mendapatkan potongan ongkir ke seluruh indonesia',
+              isSender: true,
+              hasProduct: false),
+          ChatBubblePage(
+              textChat: "Wah mantappppu jiwaaa gann",
+              isSender: false,
+              hasProduct: false),
+          ChatBubblePage(
+              textChat: "oke gan, makasih gan info nyee",
+              isSender: false,
+              hasProduct: false),
+          ChatBubblePage(
+              textChat: "oke kakak , sama-sama yaa",
+              isSender: true,
+              hasProduct: false),
         ],
       );
     }
@@ -451,7 +468,7 @@ class DetailChatPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: chatInput(),
+      // bottomNavigationBar: chatInput(),
       body: content(),
     );
   }

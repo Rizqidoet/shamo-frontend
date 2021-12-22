@@ -6,8 +6,10 @@ class ChatBubblePage extends StatelessWidget {
 
   final String textChat;
   final bool isSender;
+  final bool hasProduct;
 
-  ChatBubblePage({this.textChat = '', this.isSender = false});
+  ChatBubblePage(
+      {this.textChat = '', this.isSender = false, this.hasProduct = true});
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +108,7 @@ class ChatBubblePage extends StatelessWidget {
             ? CrossAxisAlignment.start
             : CrossAxisAlignment.end,
         children: [
-          productPreview(),
+          hasProduct ? productPreview() : SizedBox(),
           Row(
             mainAxisAlignment: isSender == true
                 ? MainAxisAlignment.start

@@ -140,10 +140,30 @@ class HomePage extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            ProductCard(),
-            ProductCard(),
-            ProductCard(),
-            ProductCard()
+            ProductCard(
+              imageProduct: 'assets/images/runningDepan-1.png',
+              categoryProduct: 'runing',
+              titleProduct: "Aerostreet Hoops Gum Series",
+              priceProduct: "\$23.32",
+            ),
+            ProductCard(
+              imageProduct: 'assets/images/basketDepan-1.png',
+              categoryProduct: 'basket',
+              titleProduct: "Aerostreet Hoops 2D Series",
+              priceProduct: "\$23.32",
+            ),
+            ProductCard(
+              imageProduct: 'assets/images/hikingDepan-1.png',
+              categoryProduct: 'hiking',
+              titleProduct: "Aerostreet Hoops Low Series",
+              priceProduct: "\$23.32",
+            ),
+            ProductCard(
+              imageProduct: 'assets/images/trainingDepan-1.png',
+              categoryProduct: 'training',
+              titleProduct: "Aerostreet Hoops x NamaKalian",
+              priceProduct: "\$23.32",
+            )
           ],
         ),
       ),
@@ -163,155 +183,37 @@ class HomePage extends StatelessWidget {
 
   Widget newArrivals() {
     return Container(
-      margin:
-          EdgeInsets.only(top: 14, left: defaultMargin, bottom: defaultMargin),
+      margin: EdgeInsets.only(
+          top: 14,
+          left: defaultMargin,
+          bottom: defaultMargin,
+          right: defaultMargin),
       child: Column(
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              NewArrivalCard(),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Football",
-                      style: secondaryTextStyle.copyWith(
-                          fontSize: 12, fontWeight: regular),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "Predator 20.3 Firm Ground",
-                      style: primaryTextStyle.copyWith(
-                          fontSize: 16, fontWeight: semiBold),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "\$68,47",
-                      style: priceTextStyle.copyWith(
-                          fontSize: 14, fontWeight: medium),
-                    ),
-                  ],
-                ),
-              )
-            ],
+          NewArrivalCard(
+            imageProduct: 'assets/images/runningDepan-1.png',
+            categoryProduct: 'runing',
+            titleProduct: "Aerostreet Hoops Gum Series",
+            priceProduct: "\$23.32",
           ),
-          SizedBox(
-            height: defaultMargin,
+          NewArrivalCard(
+            imageProduct: 'assets/images/basketDepan-1.png',
+            categoryProduct: 'basket',
+            titleProduct: "Aerostreet Hoops 2D Series",
+            priceProduct: "\$23.32",
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              NewArrivalCard(),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Football",
-                      style: secondaryTextStyle.copyWith(
-                          fontSize: 12, fontWeight: regular),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "Predator 20.3 Firm Ground",
-                      style: primaryTextStyle.copyWith(
-                          fontSize: 16, fontWeight: semiBold),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "\$68,47",
-                      style: priceTextStyle.copyWith(
-                          fontSize: 14, fontWeight: medium),
-                    ),
-                  ],
-                ),
-              )
-            ],
+          NewArrivalCard(
+            imageProduct: 'assets/images/hikingDepan-1.png',
+            categoryProduct: 'hiking',
+            titleProduct: "Aerostreet Hoops Low Series",
+            priceProduct: "\$23.32",
           ),
-          SizedBox(
-            height: defaultMargin,
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              NewArrivalCard(),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Football",
-                      style: secondaryTextStyle.copyWith(
-                          fontSize: 12, fontWeight: regular),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "Predator 20.3 Firm Ground",
-                      style: primaryTextStyle.copyWith(
-                          fontSize: 16, fontWeight: semiBold),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "\$68,47",
-                      style: priceTextStyle.copyWith(
-                          fontSize: 14, fontWeight: medium),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-          SizedBox(
-            height: defaultMargin,
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              NewArrivalCard(),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Football",
-                      style: secondaryTextStyle.copyWith(
-                          fontSize: 12, fontWeight: regular),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "Predator 20.3 Firm Ground",
-                      style: primaryTextStyle.copyWith(
-                          fontSize: 16, fontWeight: semiBold),
-                    ),
-                    SizedBox(
-                      height: 6,
-                    ),
-                    Text(
-                      "\$68,47",
-                      style: priceTextStyle.copyWith(
-                          fontSize: 14, fontWeight: medium),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+          NewArrivalCard(
+            imageProduct: 'assets/images/trainingDepan-1.png',
+            categoryProduct: 'training',
+            titleProduct: "Aerostreet Hoops x NamaKalian",
+            priceProduct: "\$23.32",
+          )
         ],
       ),
     );
