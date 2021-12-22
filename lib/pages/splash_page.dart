@@ -24,13 +24,24 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: bg1Color,
       body: SafeArea(
         child: Center(
-            child: Container(
-          width: 130,
-          height: 150,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/icons/icon_logo.png'))),
-        )),
+          child: Container(
+            width: 130,
+            height: 200,
+            child: Column(
+              children: [
+                Image.asset('assets/icons/icon_logo.png'),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Sekundren Apps",
+                  style: subtitleTextStyle.copyWith(
+                      fontSize: 16, fontWeight: semiBold),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
