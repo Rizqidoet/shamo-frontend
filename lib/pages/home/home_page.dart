@@ -72,8 +72,11 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Text(
                   "All shoes",
-                  style: primaryTextStyle.copyWith(
-                      fontSize: 13, fontWeight: medium),
+                  style: sekundren == 0
+                      ? primaryTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium)
+                      : subtitleTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium),
                 ),
               ),
             ),
@@ -94,8 +97,11 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Text(
                   "Running",
-                  style: subtitleTextStyle.copyWith(
-                      fontSize: 13, fontWeight: medium),
+                  style: sekundren == 1
+                      ? primaryTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium)
+                      : subtitleTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium),
                 ),
               ),
             ),
@@ -116,8 +122,11 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Text(
                   "Training",
-                  style: subtitleTextStyle.copyWith(
-                      fontSize: 13, fontWeight: medium),
+                  style: sekundren == 2
+                      ? primaryTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium)
+                      : subtitleTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium),
                 ),
               ),
             ),
@@ -138,8 +147,11 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Text(
                   "Basketball",
-                  style: subtitleTextStyle.copyWith(
-                      fontSize: 13, fontWeight: medium),
+                  style: sekundren == 3
+                      ? primaryTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium)
+                      : subtitleTextStyle.copyWith(
+                          fontSize: 13, fontWeight: medium),
                 ),
               ),
             ),
