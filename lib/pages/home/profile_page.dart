@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
-  Widget header() {
+  Widget header(BuildContext context) {
     return AppBar(
       backgroundColor: bg1Color,
       automaticallyImplyLeading: false,
@@ -41,10 +41,16 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              Image.asset(
-                "assets/icons/icon_signout.png",
-                height: 20,
-                width: 20,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, "/sign-in", (route) => false);
+                },
+                child: Image.asset(
+                  "assets/icons/icon_signout.png",
+                  height: 20,
+                  width: 20,
+                ),
               )
             ],
           ),
@@ -234,7 +240,7 @@ class ProfilePage extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            header(),
+            header(context),
             titleAccount(),
             contentAccount(context),
             titleGeneral(),
