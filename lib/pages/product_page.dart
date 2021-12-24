@@ -37,9 +37,14 @@ class _ProductPageState extends State<ProductPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Icon(
-                        Icons.close,
-                        color: primaryTextColor,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.close,
+                          color: primaryTextColor,
+                        ),
                       ),
                     ],
                   ),
@@ -83,7 +88,7 @@ class _ProductPageState extends State<ProductPage> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12))),
                         child: Text(
-                          "Add to Cart",
+                          "View My Cart",
                           style: primaryTextStyle.copyWith(
                               fontSize: 16, fontWeight: semiBold),
                         ),
