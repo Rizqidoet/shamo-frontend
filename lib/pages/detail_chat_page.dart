@@ -468,7 +468,7 @@ class DetailChatPage extends StatelessWidget {
           ),
         ),
       ),
-      // bottomNavigationBar: chatInput(),
+      bottomNavigationBar: chatInput(),
       body: content(),
     );
   }
