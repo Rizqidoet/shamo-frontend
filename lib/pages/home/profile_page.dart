@@ -2,7 +2,7 @@ import 'package:bwa_shamo/theme.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  // const ProfilePage({Key? key}) : super(key: key);
 
   Widget header(BuildContext context) {
     return AppBar(

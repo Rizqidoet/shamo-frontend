@@ -1,17 +1,17 @@
 import 'package:bwa_shamo/pages/detail_chat_page.dart';
 import 'package:bwa_shamo/pages/home/main_page.dart';
 import 'package:bwa_shamo/pages/menuProfiles/edit_profile.dart';
+import 'package:bwa_shamo/pages/product_page.dart';
 import 'package:bwa_shamo/pages/sign_in_page.dart';
 import 'package:bwa_shamo/pages/sign_up_page.dart';
 import 'package:bwa_shamo/pages/splash_page.dart';
 import 'package:bwa_shamo/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
-import 'theme.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/chat': (context) => ChatTile(),
         '/detail-chat': (context) => DetailChatPage(),
         '/edit-profile': (context) => EditProfilePage(),
+        '/product': (context) => ProductPage(),
       },
     );
   }

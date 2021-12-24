@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bwa_shamo/theme.dart';
 
 class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({Key? key}) : super(key: key);
+  // const EditProfilePage({Key? key}) : super(key: key);
 
   Widget header(BuildContext context) {
     return AppBar(
