@@ -1,3 +1,4 @@
+import 'package:bwa_shamo/widgets/cart_card.dart';
 import 'package:flutter/material.dart';
 import 'package:bwa_shamo/theme.dart';
 
@@ -70,7 +71,30 @@ class CartPage extends StatelessWidget {
       );
     }
 
+    Widget content(BuildContext context) {
+      return ListView(
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 30, left: 30, right: 30),
+            child: CartCard(
+              imageProduct: 'assets/images/runningDepan-1.png',
+              titleProduct: 'Aerostreet Hoops 2D Series',
+              priceProduct: '\$23.32',
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 12, left: 30, right: 30),
+            child: CartCard(
+              imageProduct: 'assets/images/hikingDepan-1.png',
+              titleProduct: 'Aerostreet Hoops 2D Gump Series',
+              priceProduct: '\$23.32',
+            ),
+          ),
+        ],
+      );
+    }
+
     return Scaffold(
-        backgroundColor: bg3Color, appBar: header(), body: emptyCart());
+        backgroundColor: bg3Color, appBar: header(), body: content(context));
   }
 }
