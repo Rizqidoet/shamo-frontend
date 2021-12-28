@@ -82,19 +82,81 @@ class CartPage extends StatelessWidget {
               priceProduct: '\$23.32',
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 12, left: 30, right: 30),
-            child: CartCard(
-              imageProduct: 'assets/images/hikingDepan-1.png',
-              titleProduct: 'Aerostreet Hoops 2D Gump Series',
-              priceProduct: '\$23.32',
-            ),
-          ),
         ],
       );
     }
 
+    Widget customButtonNav() {
+      return Container(
+        height: 135,
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Subtotal",
+                    style: primaryTextStyle.copyWith(
+                        fontSize: 14, fontWeight: medium),
+                  ),
+                  Text(
+                    "\$23.32",
+                    style: priceTextStyle.copyWith(
+                        fontSize: 14, fontWeight: regular),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Divider(
+              thickness: 0.8,
+              color: subtitleTextColor,
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                  top: 16, left: defaultMargin, right: defaultMargin),
+              height: 50,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/checkout');
+                },
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  backgroundColor: priceColor,
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Continue to checkout",
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 14, fontWeight: medium),
+                    ),
+                    Icon(
+                      Icons.arrow_forward,
+                      color: primaryTextColor,
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
-        backgroundColor: bg3Color, appBar: header(), body: content(context));
+      backgroundColor: bg3Color,
+      appBar: header(),
+      body: content(context),
+      bottomNavigationBar: customButtonNav(),
+    );
   }
 }

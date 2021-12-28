@@ -18,7 +18,6 @@ class CartCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 315,
-      height: 125,
       decoration: BoxDecoration(
         color: bg4Color,
         borderRadius: BorderRadius.circular(12),

@@ -79,7 +79,7 @@ class _ProductPageState extends State<ProductPage> {
                     child: Container(
                       child: TextButton(
                         onPressed: () {
-                          showSuccessDialog();
+                          Navigator.pushNamed(context, "/cart");
                         },
                         style: TextButton.styleFrom(
                             padding: EdgeInsets.symmetric(
