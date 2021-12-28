@@ -150,8 +150,19 @@ class CheckoutPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: defaultMargin,
+                Container(
+                  padding: EdgeInsets.only(left: 18),
+                  margin: EdgeInsets.symmetric(vertical: 2),
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "assets/icons/icon_lineVertical.png",
+                        height: 30,
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   child: Row(
